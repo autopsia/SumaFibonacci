@@ -55,9 +55,8 @@ class MainActivity : AppCompatActivity() {
     fun fibonacci(n: Int):BigInteger{
         if (f.size > n) return f[n-1]
         for (i in f.size until n){
-            f.add(f[i-2].add(f[i-1]))
+            f.add(f[i-2] + f[i-1])
         }
         return f[n-1]
     }
-    //max 94277
 }
